@@ -1,0 +1,11 @@
+<h2>Lista de la compra</h2>
+<input [(ngModel)]="nuevoProducto" placeholder="producto">
+<button (click)="addProducto()">Agregar</button>
+
+<ul class="lista-compra">
+  <li *ngFor="let producto of productos; let i = index">
+    <button class="boton-eliminar" (click)="removeProducto(i)">🗑</button>
+    {{ producto }}
+  </li>
+</ul>
+
